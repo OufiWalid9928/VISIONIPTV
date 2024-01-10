@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="js/all.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+  
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VISION IPTV</title>
+</head>
+<style>
+    html {
+        height: 100%;
+        width: 100%;
+    }
+
+    .spinner.loading {
+        padding: 50px;
+        position: fixed;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.7)
+    }
+
+    .spinner.loading:before {
+        content: "";
+        height: 80px;
+        width: 80px;
+        margin: -15px auto auto -15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #2180c0 rgba(204, 204, 204, 0.87) rgba(204, 204, 204, 0.897);
+        border-radius: 100%;
+        animation: rotation .7s infinite linear;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+    .Torder{
+        border:grey solid 1px;
+        border-radius: 10px;
+        padding: 5rem 0;
+        margin: 2rem;
+
+    }
+</style>
+
+<body>
+    <div class="spinner loading" style="display: none"></div>
+
+  <!-- Header -->
+  <header class="main-header" style="">
+    <div class="parallax-container">
+      <nav class="transparent">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><img src="logo-png.png" style="width: 230px;"></a>
+            <a href="#" data-activates="mobile-nav" class="button-collapse">
+              <i class="fa fa-bars"></i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a class="active-link" href="index.html" style="color: gray; font-size:large;  font-weight: 900; text-shadow: 0 0 3px white, 0 0 5px white;">Accueil</a>
+              </li>
+        
+              <li>
+                <a class="btn purple modal-trigger" href="solutions.html" style="color: white; font-size:large;  font-weight: 900; text-shadow: 0 0 3px black, 0 0 5px gray;">Nos offres</a>
+              </li>
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+     
+    </div>
+    
+  </header>
+
+
+    <div class="container" >
+    <div class="row">
+        <div class="col s10 Torder push-s1">
+            <h5 class="center-align">Votre Commande</h5>
+            <table class="centered striped">
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    <tr>
+                        <td id="name"></td>
+                        <td id="text"></td>
+                        <td class="price"></td>
+                    </tr>
+                
+                    <tr>
+                    
+                        <td><strong>Prix Total</strong></td>
+                        <td></td>
+                        <td class="price"><strong></strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <form class="col s6 push-s3" id="form" action=" " method="POST">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="name" type="text" name="firstName"  class="validate" required>
+                    <label for="Name">Nom</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="name" type="text" name="lastName" class="validate" required>
+                    <label for="Name">Prénom</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate" name="email" required>
+                    <label for="email">Email</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Pour Recevoir Votre Code D'activation</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 push-s4" id="Btn">
+                    <button type="submit" name="submit" class="btn-large blue btn waves-effect waves-ligh" >Valider
+                    </button>
+                </div>
+            </div>
+            <input type="hidden"name="id" id="id">
+            
+        </form>
+    </div>
+    </div>
+<!-- Footer -->
+<footer class="page-footer deep-purple lighten-1">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Nous Contacter</h5>
+                <p class="grey-text text-lighten-4">Visoniptv2812@gmail.com </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Liens</h5>
+                <ul>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="solutions.html">Nos Offres</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="tuto.html">Tutorial</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer-copyright deep-purple darken-1">
+        <div class="container">
+            VISION IPTV &copy; 2024
+        </div>
+    </div>
+</footer>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body>
+
+</html>
